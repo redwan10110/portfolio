@@ -17,7 +17,7 @@ const Navbar = () => {
         <a href="service">Service</a>
       </li> */}
       <li>
-        <a href="contact">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
       {/* {user && (
         <li>

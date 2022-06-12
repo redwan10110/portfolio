@@ -1,8 +1,21 @@
-import React from "react";
-
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_8ihd7od', 'template_xx3hn45', form.current, 'pWsxJx5rtioiTzWOS')
+        .then((result) => {
+            console.log(result.text);
+            console.log('Thank You ');
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
   return (
-    <div className="bg-transparent lg:px-12 px-6" id="project">
+    <div className="bg-transparent lg:px-12 px-6" id="contact">
       <h1 className="font-bold text-secondary my-10 text-4xl text-center">
         Contact
       </h1>
@@ -34,7 +47,7 @@ const Contact = () => {
         </div>
         <div class="card w-90 bg-transparent shadow-xl text-white">
           <div class="card-body">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <div class="form-control w-full ">
                 <label class="label">
                   <span class="label-text text-white">What is your name?</span>

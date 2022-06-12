@@ -5,19 +5,19 @@ const Navbar = () => {
   const menuItems = (
     <>
       <li>
-        <a href="#home">Home</a>
+        <a href="#header">Home</a>
       </li>
       <li>
-        <a href="#skill">Skill</a>
+        <a href="home#skill">Skill</a>
       </li>
       <li>
-        <a href="#project">Project</a>
+        <a href="home#project">Project</a>
       </li>
-      {/* <li>
-        <a href="service">Service</a>
-      </li> */}
       <li>
-        <a href="#contact">Contact</a>
+        <a href="home#contact">Contact</a>
+      </li>
+      <li>
+        <Link to="blog">Blog</Link>
       </li>
       {/* {user && (
         <li>
@@ -65,7 +65,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <a href="home" className="normal-case text-xl text-white">
+        <a href="#header" className="normal-case text-xl text-white">
         <span className="text-4xl text-secondary">R</span>edwan
         </a>
       </div>

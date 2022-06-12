@@ -3,7 +3,7 @@ import React from "react";
 import img from "./redwan2.png";
 const Header = () => {
   return (
-    <div className="w-full h-screen grid place-content-center lg:px-12 px-6" id="home">
+    <div className="w-full h-screen grid place-content-center lg:px-12 px-6" id="header">
       <div className="text-center">
         <div class="avatar">
           <div class="w-24 rounded-full ring ring-secondary mb-5">
